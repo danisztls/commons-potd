@@ -1,2 +1,11 @@
+_URLS.txt
+
 # ignore source images
-**/*.(jpg|jpeg|png|webp)
+**/*.[jJ][pP][gG]
+**/*.[jJ][pP][eE][gG]
+**/*.[pP][nN][gG]
+**/*.[wW][eE][bB][pP]
+**/*.[tT][iI][fF]
+**/*.[sS][vV][gG]
+**/*.[gG][iI][fF]
+**/*.[oO][gG][vV]
