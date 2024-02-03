@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # title: commons-potd-transform
-# description: downscale images and convert to AVIF while removing undesirables (GIF, low resolution) 
+# description: downscale pictures and convert to AVIF while removing undesirables (GIF, low resolution)
 # author: Daniel Souza <daniel at posix.dev.br>
 # license: MIT
 # requires: https://sr.ht/~nytpu/commons-downloader/ 
@@ -31,7 +31,7 @@ convertPic() {
   height=$(identify -format "%h" "$src")
   aspect_ratio=$(echo "$width/$height" | bc -l)
 
-  # if the image resolution doesn't pass the cutoff value then just remove it
+  # if the picture resolution doesn't pass the cutoff value then just remove it
   if [ "$width" -lt $CUTOFF ] || [ "$height" -lt $CUTOFF ]; then
     rm "$src"
     return
@@ -70,7 +70,7 @@ removeGifs() {
 # Main
 printf "Working from directory: ${_fmt_bold}%s${_fmt_clear}\n\n" "$REPO_DIR"
 
-printf "${_fmt_red}%s${_fmt_clear}\n\n${_fmt_bold}" "Warning! This will downscale, convert and delete all the images inside this directory."
+printf "${_fmt_red}%s${_fmt_clear}\n\n${_fmt_bold}" "Warning! This will downscale, convert and delete the sources of all the pictures inside this directory."
 read -p "Are you sure? (y/N) " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   exit
