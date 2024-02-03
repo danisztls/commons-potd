@@ -61,7 +61,7 @@ convertPics() {
 }
 
 removeUndesired() {
-  mapfile -t gifs < <(findPics '^.*\.(gif|ogv)$')
+  mapfile -t gifs < <(findPics '^.*\.(gif|ogv|svg)$')
   for file in "${gifs[@]}"; do
     rm "$file"
   done
