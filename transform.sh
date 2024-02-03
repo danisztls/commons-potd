@@ -51,7 +51,12 @@ convertPic() {
 convertPics() {
   mapfile -t pictures < <(findPics '^.*\.(jpg|jpeg|png|webp)$')
   for file in "${pictures[@]}"; do
-    convertPic "$file"
+    if [ "${file##*.}" = "avif" ]; then
+      # skip if the picture was already transformed (ends with AVIF extension)
+      continue
+    else
+      convertPic "$file"
+    fi
   done
 }
 
