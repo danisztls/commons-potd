@@ -60,8 +60,8 @@ convertPics() {
   done
 }
 
-removeGifs() {
-  mapfile -t gifs < <(findPics '^.*\.gif$')
+removeUndesired() {
+  mapfile -t gifs < <(findPics '^.*\.(gif|ogv)$')
   for file in "${gifs[@]}"; do
     rm "$file"
   done
@@ -77,5 +77,5 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
 fi
 echo -e "${_fmt_clear}\n"
 
+removeUndesired
 convertPics
-removeGifs
