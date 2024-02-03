@@ -26,7 +26,7 @@ findPics() {
 
 convertPic() {
   local src="$1"
-  local dst="${src%.*}.avif" 
+  local dst="${src}.avif" 
   width=$(identify -format "%w" "$src")
   height=$(identify -format "%h" "$src")
   aspect_ratio=$(echo "$width/$height" | bc -l)
