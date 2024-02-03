@@ -6,7 +6,7 @@ Download [Wikimedia Commons pictures of the day](https://commons.wikimedia.org/w
 
 Depends on [nytpu/commons-downloader](https://git.sr.ht/~nytpu/commons-downloader).
 
-It is inefficient and will download thousands of images sources from Commons at the highest quality taking considerable time and disk space. Instead of skipping undesirables like GIFs and low resolution pictures when extracting it will remove them later after download. I didn't bother to write a proper program because I intended to use it only once and if you're just interested in the pictures it's easier to just clone the repo.
+It is inefficient and will download thousands of images sources from Commons at the highest quality taking considerable time and disk space — ~55GB where final size is ~2.5GB. Instead of skipping undesirables like GIFs and low resolution pictures when extracting it will remove them later after download. I didn't bother to write a proper program because I intended to use it only once and if you're just interested in the pictures it's easier to just clone the repo.
 
 ## Usage
 
